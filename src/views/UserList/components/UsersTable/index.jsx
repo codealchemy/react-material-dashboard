@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // Externals
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 
 // Material helpers
@@ -176,7 +176,7 @@ class UsersTable extends Component {
                         {user.phone}
                       </TableCell>
                       <TableCell className={classes.tableCell}>
-                        {moment(user.createdAt).format('DD/MM/YYYY')}
+                        {dayjs(user.createdAt).format('DD/MM/YYYY')}
                       </TableCell>
                     </TableRow>
                   ))}

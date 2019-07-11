@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // Externals
 import classNames from 'classnames';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import PropTypes from 'prop-types';
 
@@ -161,7 +161,7 @@ class OrdersTable extends Component {
                         {order.customer.name}
                       </TableCell>
                       <TableCell>
-                        {moment(order.createdAt).format('DD/MM/YYYY')}
+                        {dayjs(order.createdAt).format('DD/MM/YYYY')}
                       </TableCell>
                       <TableCell>
                         <div className={classes.statusWrapper}>
